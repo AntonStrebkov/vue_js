@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site {
+  font-family: "Jost", sans-serif;
+  font-family: "DM Serif Display", serif;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.top-header {
+  padding-top: 53px;
+  padding-bottom: 56px;
+}
+.top-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.top-header__menu {
+  display: flex;
+  gap: 25px;
+}
+.top-header__link {
+  color: #292F36;
+  text-align: center;
+  font-family: Jost;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.banner__wrapper {
+  background: url(img/banner.png), lightgray 50%/cover no-repeat;
+  background-position: center center;
+  border-radius: 10%;
+  padding-top: 208px;
+  padding-bottom: 208px;
+  padding-left: 52px;
+}
+.banner__info {
+  width: 434px;
+}
+.banner__title {
+  margin-bottom: 18px;
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 81.25px */
+}
+.banner__link {
+  width: 240px;
+  display: block;
+  color: #FFF;
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: 0.36px;
+  margin-top: 21px;
+  padding: 26px 49px 26px 48px;
+  border-radius: 18px;
+  background: #292F36;
+  box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+}
+.banner__link svg {
+  margin-left: 10px;
+}
+
+.text {
+  text-align: center;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 33px */
+  letter-spacing: 0.22px;
+}
+
+.subtitle {
+  color: #292F36;
+  text-align: center;
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 62.5px */
+  letter-spacing: 1px;
+}
+
+.project__header {
+  padding-top: 96px;
+  padding-bottom: 93px;
+}
+.project__text {
+  text-align: center;
+}
+
+.content {
+  padding-bottom: 96px;
+}
+.content__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 104px;
+       column-gap: 104px;
+  row-gap: 56px;
+}
+.content__flex {
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.counter {
+  background: #F4F0EC;
+  padding-top: 151px;
+  padding-bottom: 151px;
+}
+.counter__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.counter__item {
+  text-align: center;
+}
+.counter__heading {
+  color: #CDA274;
+  font-family: DM Serif Display;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 106.25px */
+  letter-spacing: 1.7px;
+}
+
+.blog-header {
+  padding-top: 96px;
+  padding-bottom: 52px;
+}
+
+.blog {
+  padding-bottom: 96px;
+}
+.blog__flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(382px, 1fr));
+  -moz-column-gap: 27px;
+       column-gap: 27px;
+}
+.blog__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 62px;
+  border: 1px solid #E7E7E7;
+  box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+  padding: 21px;
+}
+.blog__img {
+  border-radius: 62px 62px 0px 0;
+}
+.blog__link {
+  position: absolute;
+  left: 40px;
+  bottom: 210px;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+  padding: 6px;
+  border-radius: 8px 8px 8px 0px;
+  background: #FFF;
+}
+.blog__info {
+  display: flex;
+  align-items: end;
+}
+.blog__heading {
+  margin-top: 21px;
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 31.25px */
+  letter-spacing: 0.5px;
+}
+.blog__text {
+  margin-top: 30px;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+}
+
+.footer {
+  padding-bottom: 134px;
+}
+.footer__flex {
+  display: flex;
+  justify-content: space-around;
+  gap: 101px;
+}
+.footer__text {
+  text-align: start;
+  margin-top: 18px;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}/*# sourceMappingURL=style.css.map */
