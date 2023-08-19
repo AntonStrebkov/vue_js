@@ -16,16 +16,21 @@
         <button @click="reverseBtn()">{{ text }}</button>
         <button @click="addElement()">Добавить</button>
         <ul>Список
-            <li @click="deleteElement()">Элемент списка</li>
+            <li v-for="(li, index) in lis" :key="li.text" @click="deleteElement(index)">
+                {{index}} {{ li.text }}
+            </li>
         </ul>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script>
-        new Vue({
+        vue = new Vue({
             el: "#app",
             data: {
                 text: "Перевернуть",
+                lis: [{
+                    text: "Элемент списка"
+                },]
             },
             methods: {
                 reverseBtn() {
@@ -33,15 +38,12 @@
                     return this.text = textButton;
                 },
                 addElement() {
-                    const ul = document.querySelector('ul');
-                    ul.insertAdjacentHTML(
-                        "beforeend",
-                        `<li @click="deleteElement()">Новый элемент списка</li>`
-                    );
+                    vue.lis.push({ text: "Новый элемент списка" })
                 },
-                deleteElement() {
-                    const li = document.querySelector('li');
-                    li.remove()
+                deleteElement(index) {
+                    // const li = document.querySelector('li');
+                    // li.remove()
+                    vue.lis.splice(index, 1)
                 },
             },
         })
