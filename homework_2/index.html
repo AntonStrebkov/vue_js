@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <p>Вы разрабатываете приложение для отображения и сортировки списка товаров. У вас есть массив объектов products,
+        где каждый объект представляет товар с его названием и ценой. Вам необходимо отобразить список товаров и
+        предоставить пользователю возможность сортировать товары по цене (по возрастанию и по убыванию).</p>
+    <div id="app">
+        <button @click="sortedArray()">По возрастанию</button>
+        <button @click="sortedArray2()">По убыванию</button>
+        <ul>
+            <li v-for="product, index in products" :key="index">
+                Наименование: {{ product.name }}
+                Стоимость: {{ product.price}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                products: [{
+                    name: "Xiaomi 13 12/256 ГБ",
+                    price: 73_990,
+                }, {
+                    name: "Xiaomi Redmi Note 12S 6/128GB",
+                    price: 20_490,
+                }, {
+                    name: "Xiaomi Redmi Note 12 8/256GB",
+                    price: 20_990,
+                }, {
+                    name: "Xiaomi Redmi Note 12 Pro 4G 8/256GB",
+                    price: 26_990,
+                }, {
+                    name: "Xiaomi Redmi Note 12 6/128GB",
+                    price: 17_990,
+                },]
+            },
+            computed: {
+            },
+            methods: {
+                sortedArray() {
+                    function compare(a, b) {
+                        if (a.price < b.price)
+                            return -1;
+                    }
+                    return this.products.sort(compare);
+                },
+                sortedArray2() {
+                    function compare(a, b) {
+                        if (a.price > b.price)
+                            return -1;
+                    }
+                    return this.products.sort(compare);
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>
