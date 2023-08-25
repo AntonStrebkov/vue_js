@@ -84,6 +84,12 @@ a {
 .banner__link svg {
   margin-left: 10px;
 }
+.banner__link:hover {
+  background: #CDA274;
+}
+.banner__link:hover path {
+  stroke: #292F36;
+}
 
 .text {
   text-align: center;
@@ -384,4 +390,110 @@ a {
   /* 24px */
   letter-spacing: 0.16px;
   text-transform: capitalize;
+}
+
+.blog-background {
+  background: url("../img/back_details.jpg"), no-repeat;
+  background-position: center center;
+  padding-bottom: 350px;
+}
+
+.details__flex {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 150px;
+  gap: 52px;
+}
+.details__content {
+  width: 75%;
+}
+.details__tags {
+  width: 25%;
+}
+
+.article {
+  text-align: start;
+}
+.article__heading {
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 62.5px */
+  letter-spacing: 1px;
+  margin-bottom: 11px;
+}
+.article__img {
+  border-radius: 50px;
+  margin-top: 11px;
+  margin-bottom: 48px;
+}
+.article__text {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 24px */
+  letter-spacing: 0.16px;
+  text-transform: capitalize;
+  margin-bottom: 48px;
+}
+.article__content {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  /* 33px */
+  letter-spacing: 0.22px;
+  margin-bottom: 48px;
+}
+
+.tag__heading {
+  color: #292F36;
+  font-family: DM Serif Display;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 31.25px */
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.tag__flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag__button {
+  color: #292F36;
+  text-align: center;
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  /* 22.5px */
+  letter-spacing: 0.36px;
+  border-radius: 10px;
+  background: #F4F0EC;
+  padding: 9px 30px;
+  border: none;
+  gap: 10px;
+  display: block;
+}
+.tag__button:hover {
+  background: #292F36;
+  color: #FFF;
+}
+
+.input-hidden {
+  position: absolute;
+  top: -9999999px;
+  visibility: hidden;
 }/*# sourceMappingURL=style.css.map */
