@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
+    <title>Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-
 </head>
 
 <body>
@@ -29,17 +28,64 @@
                 </div>
             </div>
         </header>
-        <div class="blog-background"></div>
-        <div id="details" class="center">
-            <div class="details__flex">
-                <div class="details__content">
-                    <blog-details></blog-details>
+        <section class="bread-crumbs center">
+            <div class="bread-crumbs__info">
+                <h2 class="subtitle latest_title">Articles & News</h2>
+                <p class="text">Home / Blog</p>
+            </div>
+        </section>
+        <section class="latest center">
+            <h2 class="subtitle latest__title ">Latest Post</h2>
+            <div class="latest__info">
+                <img class="latest__img" src="img/latest.png" alt="latest post">
+                <div class="latest__flex">
+                    <div class="latest__content">
+                        <h3 class="latest__subtitle">Low Cost Latest Invented Interior Designing Ideas</h3>
+                        <p class="text latest__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis
+                            dignissim
+                            maximus.posuere in.Contrary to popular belief.</p>
+                        <p class="text latest__text">Lorem Ipsum is not simply random text. It has roots in a piece of
+                            classica.</p>
+                        <p class="blog__text">26 December,2022 </p>
+
+                    </div>
+                    <a href="#"><svg width="52" height="53" viewBox="0 0 52 53" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
+                            <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="news" class="news center">
+            <h2 class="subtitle news__title">Articles & News</h2>
+            <div class="news__flex">
+                <div class="news__card" v-for="card in cards" :key="card.id">
+                    <img class="news__img" :src="card.src" alt="card">
+                    <a class="news__link" href="#">{{card.buttonText}}</a>
+                    <div class="news__info">
+                        <div class="news__content">
+                            <h3 class="news__heading">{{card.title}}</h3>
+                            <p class="news__text">
+                                {{card.date}}
+                            </p>
+                        </div>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53"
+                                fill="none">
+                                <circle cx="26.5" cy="26.267" r="26" fill="#F4F0EC" />
+                                <path d="M24.271 32.9525L30.2139 26.2668L24.271 19.5811" stroke="#292F36"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
 
                 </div>
-                <blog class="details__tags"></blog>
             </div>
-            <!-- <test-component></test-component> -->
-        </div>
+        </section>
         <footer class="footer center">
             <div class="footer__flex">
                 <div class="footer__logo"><img src="img/Logo.svg" alt="Logo">
@@ -74,15 +120,10 @@
             </div>
 
         </footer>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="scripts/test-component.js"></script>
-    <script src="scripts/component.js"></script>
-    <script>
-        new Vue({
-            el: "#details",
-        })
-    </script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>

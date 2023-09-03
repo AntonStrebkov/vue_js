@@ -1,39 +1,12 @@
-Vue.component("blog", {
-  props: ["curentTagName"],
-  data() {
-    return {
-      tags: [
-        "Kitchen",
-        "Bedroom",
-        "Building",
-        "Architecture",
-        "Kitchen Planning",
-        "Bedroom",
-      ],
-      curentTagName: "",
-    };
-  },
-
-  template: `
-  <div>
-          <aside class="tag center">
-              <h3 class="tag__heading">Tags</h3>
-              <div class="tag__flex">
-                  <button @click="curentTagName = tag" class="tag__button" v-for="(tag, index) in tags"
-                      :key="index">
-                      {{tag}}
-                  </button>
-              </div>
-          </aside>
-      </div>
-        `,
-});
-
 Vue.component("blogs-list", {
-  //   props: ["curentTagName"],
-
   data() {
     return {
+      props: {
+        curentTagName: {
+          type: String,
+        },
+      },
+
       subtitle: "Design sprints are great",
       subtitleText:
         "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.",
@@ -56,7 +29,7 @@ Vue.component("blogs-list", {
     <h2 class="article__heading">{{subtitle}}</h2>
     <p class="article__content">{{subtitleText}}</p>
     <div>
-    <input class="input-hidden" type="text" v-model="curentTagName">
+    <input type="text" v-model="curentTagName">
     <ol>
       <li class="article__content"  v-for="article in filterArticles">
          {{article}}
@@ -72,6 +45,37 @@ Vue.component("blogs-list", {
       );
     },
   },
+});
+
+Vue.component("blog", {
+  data() {
+    return {
+      tags: [
+        "Kitchen",
+        "Bedroom",
+        "Building",
+        "Architecture",
+        "Kitchen Planning",
+        "Bedroom",
+      ],
+      curentTagName: "",
+    };
+  },
+
+  template: `
+      <div>
+          <aside class="tag center">
+              <h3 class="tag__heading">Tags</h3>
+              <div class="tag__flex">
+                  <button @click="curentTagName=tag"  class="tag__button" v-for="(tag, index) in tags"
+                      :key="index">
+                      {{tag}}
+                  </button>
+              </div>
+          </aside>
+          <blogs-list></blogs-list>
+      </div>
+        `,
 });
 
 Vue.component("blog-details", {
