@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="css">
 #app {
   font-family: "Jost", sans-serif;
   font-family: "DM Serif Display", serif;

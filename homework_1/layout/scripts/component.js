@@ -1,12 +1,6 @@
 Vue.component("blogs-list", {
   data() {
     return {
-      props: {
-        curentTagName: {
-          type: String,
-        },
-      },
-
       subtitle: "Design sprints are great",
       subtitleText:
         "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.",
@@ -36,7 +30,9 @@ Vue.component("blogs-list", {
       </li>
     </ol>
     </div>
+    <blog class="details__tags"></blog>
   </div>
+  
     `,
   computed: {
     filterArticles() {
@@ -73,7 +69,6 @@ Vue.component("blog", {
                   </button>
               </div>
           </aside>
-          <blogs-list></blogs-list>
       </div>
         `,
 });

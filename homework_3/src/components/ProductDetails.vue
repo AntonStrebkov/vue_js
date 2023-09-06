@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="center">
     <p>
       {{ product.name }} <input type="number" v-model="product.count" min="0" />
       <span v-if="isAvalible()">Available</span>
