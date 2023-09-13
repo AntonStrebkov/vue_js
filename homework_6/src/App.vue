@@ -31,13 +31,13 @@ export default {
           title: "Minimal Bedroom",
           text: "Decor / Artchitecture",
           tag: "BedRoom",
-          img: "img/card_prod.png",
+          img: "./img/card_prod.png",
         },
         {
           title: "Minimal Bedroom",
           text: "Decor / Artchitecture",
           tag: "BedRoom",
-          img: "img/card_prod.png",
+          img: "./img/card_prod.png",
         },
 
         {
